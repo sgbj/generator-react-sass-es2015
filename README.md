@@ -16,11 +16,13 @@ Then generate your new project:
 yo react-sass-es2015
 ```
 
-Get up and running:
+And get up and running with:
 
 ```bash
 gulp
 ```
+
+![Result](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/result.png)
 
 ## Getting To Know Yeoman
 
