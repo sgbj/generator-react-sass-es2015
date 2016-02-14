@@ -65,4 +65,4 @@ gulp.task('open', ['connect'], () => {
 
 gulp.task('build', ['html', 'js', 'sass']);
 
-gulp.task('default', ['build', 'watch', 'connect', 'open']);
+gulp.task('default', ['build', 'watch', 'open']);
