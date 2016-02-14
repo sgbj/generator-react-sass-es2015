@@ -23,6 +23,27 @@ gulp
 ```
 
 ## Result
+
+What you get:
+
+```
+├── app/                     # The source code of the application
+│   ├── components/          # The react components
+│   │   ├── app.js           # The application layout
+│   │   ├── index.js         # The home page
+│   │   ├── about.js         # The about page 
+│   │   ├── contact.js       # The contact page
+│   ├── index.html           # The root html file
+│   ├── style.scss           # Stylesheet
+│   └── bootstrapper.js      # Renders the app and defines the routes
+├── build/                   # Build/processed files
+├── node_modules/            # Libraries/utilities
+│── gulpfile.js              # Build script
+│── package.json             # Application config and dependencies
+```
+
+What it looks like:
+
 ![Result](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/result.png)
 
 ## Getting To Know Yeoman
