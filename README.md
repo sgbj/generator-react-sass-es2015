@@ -22,6 +22,7 @@ And get up and running with:
 gulp
 ```
 
+## Result
 ![Result](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/result.png)
 
 ## Getting To Know Yeoman
