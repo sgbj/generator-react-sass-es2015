@@ -12,12 +12,16 @@ module.exports = yeoman.generators.Base.extend({
       'Welcome to the stylish ' + chalk.red('react-sass-es2015') + ' generator!'
     ));
 
-    var prompts = [/*{
+    var prompts = [{
+      name: 'appName',
+      message: 'What\'s your app\'s name?'
+    }, 
+    {
       type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
+      name: 'createDir',
+      message: 'Want me to create the directory for you?',
       default: true
-    }*/];
+    }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
@@ -28,21 +32,33 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: function () {
-    this.fs.copy(
+    var dir = this.props.createDir ? this.props.appName : '';
+    
+    this.log(chalk.red('\nCreating files...\n'));
+    
+    this.template(
       this.templatePath('package.json'),
-      this.destinationPath('package.json')
+      this.destinationPath(dir, 'package.json'),
+      this.props
     );
     this.fs.copy(
       this.templatePath('gulpfile.js'),
-      this.destinationPath('gulpfile.js')
+      this.destinationPath(dir, 'gulpfile.js')
     );
-    this.fs.copy(
+    this.template(
       this.templatePath('app'),
-      this.destinationPath('app')
+      this.destinationPath(dir, 'app'),
+      this.props
     );
   },
 
   install: function () {
-    this.installDependencies();
+    this.log('\n' + chalk.red('Installing dependencies...') + '\n');
+    if (this.props.createDir) {
+      process.chdir(this.destinationPath(this.props.appName));
+    }
+    this.npmInstall('', function () {
+      this.log(chalk.red('\nHave fun working on ' + this.props.appName + '! <3'));
+    }.bind(this));
   }
 });
