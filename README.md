@@ -48,7 +48,9 @@ What you get:
 
 What it looks like:
 
-![Result](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/result.png)
+![Console](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/screenshots/console.png)
+
+![App](https://raw.githubusercontent.com/sgbj/generator-react-sass-es2015/master/screenshots/app.png)
 
 ## Getting To Know Yeoman
 
