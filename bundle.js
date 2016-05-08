@@ -256,7 +256,7 @@ var Home = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed sem diam. Aenean non mi dolor. Etiam ut leo viverra mi semper posuere quis ut sem. Vestibulum finibus sollicitudin volutpat. Suspendisse faucibus dapibus condimentum. Donec eu velit ut felis auctor dapibus in finibus erat. Duis ut euismod nulla. Sed pretium libero ut neque finibus eleifend.'
+          'Have fun working on awesom-o-4000! <3'
         )
       );
     }
@@ -2207,6 +2207,9 @@ var currentQueue;
 var queueIndex = -1;
 
 function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
     draining = false;
     if (currentQueue.length) {
         queue = currentQueue.concat(queue);
