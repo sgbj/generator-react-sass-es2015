@@ -1,6 +1,6 @@
 {
   "name": "generator-react-sass-es2015",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Generate a web app that uses React, Sass, Gulp, Browserify, and ES2015",
   "homepage": "https://github.com/sgbj/generator-react-sass-es2015",
   "author": {
